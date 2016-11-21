@@ -8,55 +8,55 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ChangePassActivity" >
 
-    
-       <TextView
-        android:id="@+id/textView1"
+
+    <TextView
+        android:id="@+id/tv_old_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignLeft="@+id/tv_enter_password"
         android:layout_alignParentTop="true"
         android:layout_marginTop="24dp"
-        android:text="@+string/oldPass"
+        android:text="@string/old_password"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_enter_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/oldPassfield"
+        android:layout_below="@+id/et_old_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
-        android:text="@string/newPass"
+        android:text="@string/new_password"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/newPassfield"
+        android:id="@+id/et_new_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/tv_enter_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
         android:ems="10" />
 
     <EditText
-        android:id="@+id/oldPassfield"
+        android:id="@+id/et_old_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/newPassfield"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/et_new_password"
+        android:layout_below="@+id/tv_old_password"
         android:layout_marginTop="15dp"
         android:ems="10" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/newPassfield"
+        android:layout_below="@+id/et_new_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="59dp"
         android:onClick="changePass"
         android:text="@string/change" />
-    
+
 
 </RelativeLayout>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/LinearLayout1"
+    android:id="@+id/ll_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -10,13 +10,13 @@
         android:layout_height="53dp" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/tv_old_password"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="@string/title" />
 
         <EditText
-            android:id="@+id/title"
+            android:id="@+id/et_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.47"
@@ -31,13 +31,13 @@
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="@string/username" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/et_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -49,13 +49,13 @@
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tv_password"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="@string/password" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10" />
@@ -66,13 +66,13 @@
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/tv_extra"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="@string/extra" />
 
         <EditText
-            android:id="@+id/extra"
+            android:id="@+id/et_extra"
             android:layout_width="wrap_content"
             android:layout_height="176dp"
             android:layout_gravity="top"
