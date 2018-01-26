@@ -40,4 +40,14 @@
         android:onClick="login"
         android:text="@string/Login" />
 
+    <ImageView
+        android:id="@+id/iv_fingerprint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_fingerprint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_extra_large"
+        android:layout_alignParentBottom="true"
+        />
+
 </RelativeLayout>

@@ -7,15 +7,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import static com.example.passwordkeeper.Constants.BUNDLE_EXTRA_PASSWORD;
 import static com.example.passwordkeeper.Constants.PREFS_NAME;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
-    EditText passwordEntered;
+    private EditText etPasswordEntered;
     static String oldPass;
-
+    private ImageView ivFingerprint; // TODO maybe use this?
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     public void login(View v) {
         Intent intent = new Intent(this, PasswordListActivity.class);
-        passwordEntered = (EditText) findViewById(R.id.et_password);
-        String password = passwordEntered.getText().toString();
+        etPasswordEntered = (EditText) findViewById(R.id.et_password);
+        String password = etPasswordEntered.getText().toString();
         intent.putExtra(BUNDLE_EXTRA_PASSWORD, password);
 
         if (password.equals(oldPass)) {
