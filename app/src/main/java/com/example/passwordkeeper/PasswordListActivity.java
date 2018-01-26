@@ -109,11 +109,19 @@ public class PasswordListActivity extends Activity implements OnItemClickListene
 
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY);
     }
+<<<<<<< HEAD
 
     @Override
     protected void onResume() {
         super.onResume();
         
+=======
+    
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+>>>>>>> bd2e8740bb005e96160a775429c8e74e8725daf7
         hideKeyobard();
     }
 
