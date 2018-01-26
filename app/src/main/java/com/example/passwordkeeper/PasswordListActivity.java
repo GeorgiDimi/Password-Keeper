@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
@@ -91,6 +92,29 @@ public class PasswordListActivity extends Activity implements OnItemClickListene
                 begin(position, id);
             }
         });
+    }
+
+    private void hideKeyobard() {
+        View view = this.getCurrentFocus();
+
+        if (view == null) {
+            return;
+        }
+
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        if (inputMethodManager == null) {
+            return;
+        }
+
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY);
+    }
+    
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        hideKeyobard();
     }
 
     public void begin(int position, long id) {
