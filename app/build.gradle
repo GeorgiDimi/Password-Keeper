@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 31
+    buildToolsVersion "30.0.0"
 
     defaultConfig {
         applicationId "com.example.passwordkeeper"
-        minSdkVersion 23
-        targetSdkVersion 26
+        minSdkVersion 24
+        targetSdkVersion 31
     }
 
     buildTypes {
@@ -19,7 +19,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:26.1.0'
+//    compile 'com.android.support:support-v4:26.1.0'
 
     androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.3'
 

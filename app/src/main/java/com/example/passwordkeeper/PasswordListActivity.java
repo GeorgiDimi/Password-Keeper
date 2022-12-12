@@ -31,6 +31,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Build;
 
+import static com.example.passwordkeeper.Constants.BUNDLE_EXTRA_PASSWORD;
+
 public class PasswordListActivity extends Activity implements OnItemClickListener {
     private PasswordAdapter mDbHelper = new PasswordAdapter(this);
     ListView lv;
@@ -71,6 +73,13 @@ public class PasswordListActivity extends Activity implements OnItemClickListene
 //        mListState = getListView().onSaveInstanceState();
 //        state.putParcelable(LIST_STATE, mListState);
 //    }
+
+    public static Intent getIntent(final Context context, final String password) {
+        Intent intent = new Intent(context, PasswordListActivity.class);
+        intent.putExtra(BUNDLE_EXTRA_PASSWORD, password);
+
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
