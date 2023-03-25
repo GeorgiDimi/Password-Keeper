@@ -9,7 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.support.v4.app.NavUtils;
+
+import com.example.myapplication.R;
 
 import static com.example.passwordkeeper.Constants.BUNDLE_EXTRA_OLD_PASSWORD;
 import static com.example.passwordkeeper.Constants.PREFS_NAME;
@@ -77,7 +78,7 @@ public class ChangePassActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
+//                NavUtils.navigateUpFromSameTask(this); // TODO fix this
                 return true;
         }
         return super.onOptionsItemSelected(item);

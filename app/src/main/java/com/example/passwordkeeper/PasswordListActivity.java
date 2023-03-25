@@ -24,12 +24,13 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Build;
+
+import com.example.myapplication.R;
 
 import static com.example.passwordkeeper.Constants.BUNDLE_EXTRA_PASSWORD;
 
@@ -194,7 +195,7 @@ public class PasswordListActivity extends Activity implements OnItemClickListene
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
+//                NavUtils.navigateUpFromSameTask(this); // TOOD fix this
                 return true;
             case R.id.item1:
                 createNote();
@@ -220,7 +221,7 @@ public class PasswordListActivity extends Activity implements OnItemClickListene
 
     @Override
     public void onBackPressed() {
-        NavUtils.navigateUpFromSameTask(this);
+//        NavUtils.navigateUpFromSameTask(this); // TODO fix this
     }
 
     public void read() //reads from a txt file
